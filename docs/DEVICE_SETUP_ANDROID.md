@@ -47,3 +47,17 @@ Not allowed by default:
 5. Run built-in app benchmarks manually and store generated notes outside git
    under `reports/`.
 6. Summarize only non-sensitive metrics in PRs or docs.
+
+## First live-device commands
+
+Run these only after the phone is connected, USB debugging is enabled, and the
+ADB authorization prompt has been accepted on the device:
+
+```powershell
+$env:PHONE_EVALS_DEVICE = "1"
+phone-evals doctor
+phone-evals device snapshot --out reports/device
+```
+
+Keep `reports/` out of git. Summarize only non-sensitive metrics in follow-up
+docs or PRs.
