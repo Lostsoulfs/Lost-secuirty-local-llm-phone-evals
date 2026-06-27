@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=69"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "lost-security-local-llm-phone-evals"
+version = "0.1.0"
+description = "Google-first local LLM phone evaluation kit for Android devices."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Scott Roberts" }]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8,<9",
+]
+
+[project.scripts]
+phone-evals = "phone_eval_kit.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["phone_eval_kit*"]
+
+[tool.setuptools.package-data]
+phone_eval_kit = ["evals/*.jsonl"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra"
+markers = [
+    "device: requires PHONE_EVALS_DEVICE=1 and an authorized Android device",
+]
