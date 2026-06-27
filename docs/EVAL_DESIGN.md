@@ -16,6 +16,12 @@ Each non-empty line is a JSON object with:
 
 Built-in cases live in `phone_eval_kit/evals/`.
 
+## V1 harnesses
+
+The current production harnesses are listed in `docs/HARNESS_CATALOG.md` and
+registered in `phone_eval_kit.harnesses`. New harnesses should update both
+places unless they are experimental.
+
 ## Report JSON
 
 Reports include:

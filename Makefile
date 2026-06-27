@@ -1,4 +1,4 @@
-.PHONY: test proof doctor scan clean
+.PHONY: test proof doctor scan whitespace report-check check clean
 
 PY ?= python
 
@@ -13,6 +13,14 @@ doctor:
 
 scan:
 	$(PY) tools/scan_staged.py
+
+whitespace:
+	$(PY) tools/check_whitespace.py
+
+report-check:
+	$(PY) tools/generate_report.py --check
+
+check: test proof scan whitespace report-check
 
 clean:
 	$(PY) -c "import pathlib, shutil; [shutil.rmtree(p, ignore_errors=True) for p in pathlib.Path('.').rglob('__pycache__')]"

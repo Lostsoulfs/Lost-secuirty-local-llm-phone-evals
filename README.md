@@ -79,6 +79,7 @@ MODEL_PROVENANCE.md   Model/tool source, license, and checksum log
 
 - `docs/REVIEWER_QUICKSTART.md` - review path and current proof limits.
 - `docs/EVAL_DESIGN.md` - eval case and report interfaces.
+- `docs/HARNESS_CATALOG.md` - production-grade harness inventory.
 - `docs/DEVICE_SETUP_ANDROID.md` - Android and ADB setup boundaries.
 - `docs/HARDWARE_BASELINE.md` - Galaxy S26 Ultra 1TB baseline assumptions.
 - `docs/PROOF_TEST_STANDARD.md` - safe fixture plus planted-bad proof rule.
@@ -97,3 +98,5 @@ MODEL_PROVENANCE.md   Model/tool source, license, and checksum log
 - Android Power Profiler: https://developer.android.com/studio/profile/power-profiler
 - Samsung Galaxy S26 Ultra: https://www.samsung.com/us/smartphones/galaxy-s26-ultra/
 - Samsung device comparison support: https://www.samsung.com/us/support/answer/ANS10010342/
+- OWASP Top 10 for LLM Applications: https://owasp.org/www-project-top-10-for-large-language-model-applications/
+- NIST AI Risk Management Framework: https://www.nist.gov/itl/ai-risk-management-framework

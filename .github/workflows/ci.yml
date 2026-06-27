@@ -26,5 +26,11 @@ jobs:
         run: python -m pytest
       - name: CLI proof baseline
         run: phone-evals proof
+      - name: Report generation check
+        run: python tools/generate_report.py --check
+      - name: Whitespace check
+        run: python tools/check_whitespace.py
       - name: Redaction scanner self-test
         run: python tools/scan_staged.py --self-test
+      - name: Repository sensitive-data scan
+        run: python tools/scan_staged.py --all

@@ -19,7 +19,8 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--check", action="store_true", help="validate report generation without writing")
     parser.add_argument("--out", type=Path, default=Path("reports/baseline-report.json"))
     args = parser.parse_args(argv)
-    report = run_cases(load_cases(suite="safety"), FakeRuntimeAdapter(), model_id="fake-safe")
+    cases = [*load_cases(suite="safety"), *load_cases(suite="performance")]
+    report = run_cases(cases, FakeRuntimeAdapter(), model_id="fake-safe")
     if args.check:
         print(json.dumps({"status": "ok", "case_count": report["metrics"]["case_count"]}, sort_keys=True))
         return 0
