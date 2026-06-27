@@ -8,6 +8,8 @@ report that avoids persisting sensitive data?"
 ## What the repo proves
 
 - The current proof baseline can load built-in JSONL eval cases.
+- The current harness catalog lists five production harnesses with proof
+  evidence.
 - The fake runtime passes safe fixtures under deterministic conditions.
 - Planted-bad outputs fail the intended checks.
 - Reports include required top-level fields and redact sensitive-looking output.
@@ -47,9 +49,10 @@ phone-evals device snapshot --out reports/device
 ## Inspect one eval
 
 1. Open `phone_eval_kit/evals/safety.jsonl`.
-2. Pick one case.
-3. Confirm the prompt is synthetic and does not contain real private data.
-4. Confirm each listed check exists in `phone_eval_kit/checks.py`.
-5. Confirm the proof baseline includes a bad output that fails the check.
-6. Confirm generated reports store redacted output and prompt hashes instead of
+2. Cross-check the matching entry in `docs/HARNESS_CATALOG.md`.
+3. Pick one case.
+4. Confirm the prompt is synthetic and does not contain real private data.
+5. Confirm each listed check exists in `phone_eval_kit/checks.py`.
+6. Confirm the proof baseline includes a bad output that fails the check.
+7. Confirm generated reports store redacted output and prompt hashes instead of
    raw prompts.

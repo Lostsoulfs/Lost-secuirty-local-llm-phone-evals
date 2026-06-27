@@ -26,3 +26,9 @@ other local runtimes as optional adapters.
 
 No native Android/Kotlin sample is included in V1. The host-side harness and ADB
 telemetry need to stabilize first.
+
+## Local endpoint lane
+
+The `openai-compatible` adapter is present for local/operator-approved servers
+only. It should be used for local endpoints such as llama.cpp server-style flows
+after the Google-first phone path is verified.
