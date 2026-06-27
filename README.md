@@ -82,6 +82,7 @@ MODEL_PROVENANCE.md   Model/tool source, license, and checksum log
 - `docs/HARNESS_CATALOG.md` - production-grade harness inventory.
 - `docs/DEVICE_SETUP_ANDROID.md` - Android and ADB setup boundaries.
 - `docs/HARDWARE_BASELINE.md` - Galaxy S26 Ultra 1TB baseline assumptions.
+- `docs/NEXT_OPERATOR_STEPS.md` - physical phone and model setup handoff.
 - `docs/PROOF_TEST_STANDARD.md` - safe fixture plus planted-bad proof rule.
 - `docs/AI_AUTHORED_TEST_AUDIT.md` - checklist for AI-assisted test trust.
 - `MODEL_PROVENANCE.md` - model, app, and runtime provenance log.
